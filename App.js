@@ -1,6 +1,6 @@
 const express = require('express');
 const app=express();
-
+app.set('trust proxy', true);
 const PORT = 3000;
 app.get('/api/whoami',(req,res)=>{
     const ipvalue = req.ip;
